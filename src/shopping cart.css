@@ -1,0 +1,330 @@
+/* changing default styles of the browser */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+i {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.hide{
+    display: none;
+}
+
+/* navbar styles */
+.navbar {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #f0bf5d;
+    color: white;
+    padding: 25px 60px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.nav-links ul {
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    gap: 40px;
+    align-items: center;
+    font-size: large;
+    list-style: none;
+    margin-top: 40px;
+    font-weight: bold;
+}
+/* bruger-icon */
+.bruger{
+    position: relative;
+}
+.bruger-icon {
+    width: 30px;
+    height: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.bruger-icon span {
+    background-color: white;
+    margin-bottom: 5px;
+    height: 2px;
+    width: 100%;
+}
+
+.nav-bruger-links{
+    position: absolute;
+    border: solid 1px white;
+    border-radius: 5px;
+    background-color: rgba(201, 190, 190, 0.395);
+    padding: 8px;
+    width: max-content;
+}
+.nav-bruger-links li{
+list-style:none;
+margin: 8px 0;
+}
+
+.nav-bruger {
+    display: none;
+}
+/* bruger-icon */
+
+.logo {
+    width: 70px;
+    height: 70px;
+    border: solid 2px #f0bf5d;
+    border-radius: 50%;
+    /* margin-top: 10px; */
+}
+
+.icons img {
+    width: 30px;
+}
+    
+/* margin-right: 250px; */
+.icons{
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart {
+    position: relative;
+    background-color: #fff;
+    color: black;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 4px;
+}
+
+.cartAmount {
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    font-size: 16px;
+    padding: 3px;
+    border-radius: 3px;
+    background-color: red;
+    color: white;
+}
+
+@keyframes backgrund {
+    from {
+        background-image: url("/cozy\ shoop\ imgs/backgrund.jpg");
+    }
+
+    to {
+        background-image: url("/cozy\ shoop\ imgs/backgrund2.jpg");
+    }
+}
+
+.header {
+    text-align: center;
+    background-image: url("/cozy\ shoop\ imgs/backgrund.jpg");
+    animation-name: backgrund;
+    animation: backgrund 5s infinite ease-in-out;
+    margin-bottom: 20px;
+    padding: 245px 0 48px 0;
+}
+
+.shop-name {
+    text-align: center;
+    padding-top: 30px;
+    color: rgb(122, 2, 2);
+}
+
+.info {
+    padding: 10px auto;
+    color: rgb(122, 2, 2);
+}
+.section{
+    max-width: 1234px;
+    margin: 0 auto;
+}
+
+.wool-hat,
+.wool-scarves,
+.wool-gloves {
+    margin: auto auto;
+    width: 300px;
+    text-align: center;
+    letter-spacing: 10px;
+    font-weight: bold;
+    background-color: #f0bf5d;
+    color: white;
+    border: solid 2px;
+    border-radius: 5px;
+}
+
+.wool-gloves {
+    margin-top: 40px;
+    align-items: center;
+}
+
+/* shoop item are here */
+.shop {
+    display: grid;
+    grid-template-columns: repeat(4, 223px);
+    gap: 30px;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    grid-template-columns: repeat(auto-fill, 223px);
+}
+
+@media (max-width: 1500px){
+    .nav-links{
+        display: block;
+    }
+    .bruger{
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar{
+        padding: 25px 8px;
+    }
+    .nav-links{
+        display: none;
+    }
+    .bruger{
+        display: block;
+    }
+    
+    
+}
+
+.item {
+    border: 2px solid #f0bf5d;
+    border-radius: 4px;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+
+.price-quantity {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    gap: 8px;
+    font-size: 16px;
+}
+
+/* .minus {
+    color: red;
+} */
+
+.plus {
+    background-color: #f0bf5d;
+    color: white;
+    padding: 3px;
+    border: #f0bf5d 2px solid;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* style rules for label and button */
+.text-center {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.HomBtun,
+.checkout,
+.removeAll {
+    background-color: #f0bf5d;
+    color: white;
+    border: none;
+    padding: 6px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* style shopping cart */
+.shopping-cart {
+    display: grid;
+    grid-template-columns: repeat(1, 320px);
+    justify-content: center;
+    gap: 15px;
+}
+
+/* style shopping caert-item */
+.cart-item {
+    border: 2px solid #f0bf5d;
+    border-radius: 5px;
+    display: flex;
+}
+
+.titel-price-x {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 190px;
+}
+
+.title-price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.item-price {
+    background-color: #f0bf5d;
+    color: white;
+    border-radius: 4px;
+    padding: 3px 6px;
+}
+
+.footer {
+    background-color: #f0bf5d;
+    margin-top: 100px;
+    height: 250px;
+    padding: 10px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer-icon{
+    width: 30px;
+    padding: 4px;
+}
+.footer-links a{
+    line-height: 2.6;
+    text-decoration: underline;
+}
+.Customer-Service, .media, .shipping{
+    line-height: 2.6;
+    gap: 20px;
+    
+}
+
+
